@@ -1,0 +1,57 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<div class="container">
+    <h1>Личное дело студента</h1>
+
+    <form action="" method="post">
+        {% csrf_token %}
+       ФИО    <input type="text" name="FIO">
+        ИНН  <input type="text" name="INN">
+        email  <input type="text" name="email">
+        <br>
+        <br>
+        Телефон  <input type="text" name="phone">
+         Дата рождения  <input type="date" name="date_of_birth">
+        Пол <select name="sex">
+            <option value="male">мужской</option>
+            <option value="female">женский</option>
+        </select>
+        <br>
+        <br>
+        Нациальнальность  <input type="text" name="nation">
+        Гражданство  <input type="text" name="cityzen">
+        Семейное положение <select name="status">
+            <option value="married">женат</option>
+            <option value="single">холост</option>
+        </select>
+        <br>
+        Сирота <input type="checkbox" name="orhan">
+        <br>
+        Инвалид <input type="checkbox" name="invalid">
+        <br>
+        <br>
+        <h4>Данные о месте рождения </h4>
+         Страна  <select name="country">
+            <option value="kg">Кыргызстан</option>
+            <option value="kz">Казахстан</option>
+        </select>
+
+        Область <select name="region">
+            <option value="Chuy">Чуй</option>
+            <option value="Talas">Талас</option>
+        </select>
+
+        Район  <input type="text" name="district">
+        Город  <input type="text" name="city">
+        Село  <input type="text" name="village">
+        <br>
+        <br>
+        <h4>Данные о месте проживания </h4>
+        Адрес по прописке <input type="text" name="address1">
+        Адрес проживания <input type="text" name="address2">
+        <br>
+        <br>
+        <input type="submit" value="Save" class="btn btn-primary">
+
+    </form>
+
+</div>
